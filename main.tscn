@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnjmrgl5y0vcb"]
+
+[ext_resource type="Script" path="res://Main.gd" id="1_xjbio"]
+[ext_resource type="Script" path="res://addons/GodotAndroidVkAds/vk_ads.gd" id="2_nnp1c"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xjbio")
+
+[node name="Rewarded" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.278
+anchor_top = 0.198
+anchor_right = 0.719
+anchor_bottom = 0.395
+offset_left = -0.256042
+offset_top = -0.304016
+offset_right = -0.288025
+offset_bottom = 0.0399933
+text = "Rewarded"
+
+[node name="Interstitial" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.278
+anchor_top = 0.494
+anchor_right = 0.722
+anchor_bottom = 0.691
+offset_left = -0.256042
+offset_top = -0.112
+offset_right = 0.25592
+offset_bottom = 0.231964
+text = "Interstitial"
+
+[node name="VkAds" type="Node" parent="."]
+script = ExtResource("2_nnp1c")
+banner_id = 1572105
+interstitial_id = 1570760
+rewarded_id = 1570763
+
+[connection signal="pressed" from="Rewarded" to="." method="_on_rewarded_pressed"]
+[connection signal="pressed" from="Interstitial" to="." method="_on_interstitial_pressed"]
+[connection signal="banner_loaded" from="VkAds" to="." method="_on_vk_ads_banner_loaded"]
+[connection signal="interstitial_loaded" from="VkAds" to="." method="_on_vk_ads_interstitial_loaded"]
+[connection signal="rewarded" from="VkAds" to="." method="_on_vk_ads_rewarded"]
+[connection signal="rewarded_video_loaded" from="VkAds" to="." method="_on_vk_ads_rewarded_video_loaded"]
