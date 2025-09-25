@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bnjmrgl5y0vcb"]
 
-[ext_resource type="Script" path="res://Main.gd" id="1_xjbio"]
-[ext_resource type="Script" path="res://addons/GodotAndroidVkAds/vk_ads.gd" id="2_nnp1c"]
+[ext_resource type="Script" uid="uid://chqt5jgcg501r" path="res://Main.gd" id="1_xjbio"]
+[ext_resource type="Script" uid="uid://ck0f5g1ky8gwi" path="res://addons/GodotAndroidVkAds/vk_ads.gd" id="2_nnp1c"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
